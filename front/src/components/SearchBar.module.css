@@ -1,0 +1,107 @@
+/* Estilos generales */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 5px;
+}
+
+.search-bar input[type="text"] {
+  margin-right: 10px;
+  font-family: fantasy;
+  font-size: 18px;
+  background-color: rgb(78, 57, 80);
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  color: antiquewhite;
+  box-shadow: 0 0 10px 10px rgba(223, 213, 222, 0.5);
+}
+
+.add-button {
+  background-color: pink;
+  color: rgb(191, 20, 182);
+  padding: 8px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 10px 10px rgba(223, 213, 222, 0.5);
+}
+
+.add-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(191, 20, 148, 0.3);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.add-button:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: transparent;
+}
+
+.add-button:hover::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(9, 157, 202, 0.5) 0%, rgba(190, 20, 148, 0) 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.add-button:hover::after {
+  opacity: 1;
+}
+
+/* Estilos para tablets */
+@media only screen and (max-width: 768px) {
+  .search-bar input[type="text"] {
+    font-size: 14px;
+  }
+  
+  .add-button {
+    padding: 6px 12px;
+  }
+}
+
+/* Estilos para iPhone */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .search-bar input[type="text"] {
+    font-size: 16px;
+  }
+  
+  .add-button {
+    padding: 7px 14px;
+  }
+}
+
+/* Estilos para Samsung */
+@media only screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+  .search-bar input[type="text"] {
+    font-size: 16px;
+  }
+  
+  .add-button {
+    padding: 7px 14px;
+  }
+}

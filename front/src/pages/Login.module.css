@@ -1,0 +1,73 @@
+/* Estilos base */
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 39%,
+    rgba(107, 17, 187, 0.9850533963585434) 51%,
+    rgba(54, 115, 221, 0.7861738445378151) 75%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.login-container {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-width: 1px;
+  border-image: linear-gradient(to bottom, rgba(2, 0, 0, 0), rgba(2, 0, 0, 1)) 1;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.login-input,
+.login-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-input {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-shadow: 4px 4px 8px rgba(8, 134, 218, 0.901);
+  color: rgb(221, 208, 221);
+  padding: 8px 16px;
+  animation: slide-in 3s infinite alternate;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Media queries para ajustar estilos en diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .login-container {
+    width: 80%;
+    max-width: 400px;
+  }
+}

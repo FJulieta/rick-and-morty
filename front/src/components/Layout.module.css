@@ -1,0 +1,46 @@
+/* Estilos generales */
+.body {
+  text-align: center;
+  padding: 0px 20px;
+  background-image: url("/public/background.mp4");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 68px - 20px);
+}
+
+.background-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background-video video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos para tablets */
+@media only screen and (max-width: 768px) {
+  .body {
+    padding: 0px 10px;
+  }
+}
+
+/* Estilos para iPhone */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .body {
+    padding: 0px 15px;
+  }
+}
+
+/* Estilos para Samsung */
+@media only screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+  .body {
+    padding: 0px 15px;
+  }
+}

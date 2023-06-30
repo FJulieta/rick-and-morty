@@ -1,0 +1,65 @@
+.about-image {
+  max-width: 30%;
+  margin: 10px;
+  background-color: #f0f0f0;
+  border-radius: 500px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s ease;
+
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+
+  font-family: "Rick and Morty Font", sans-serif;
+  font-weight: bold;
+
+  position: relative;
+  animation: cardAnimation 5s infinite alternate;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .about-image {
+    max-width: 50%;
+  }
+}
+
+.about-image:hover {
+  box-shadow: 0 0 90px rgba(247, 244, 244, 0.909);
+  opacity: 1;
+  animation: cardAnimation 0.5s;
+}
+
+@keyframes cardAnimation {
+  0% {
+    transform: translateY(1);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(10);
+  }
+}
+
+.about-text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 4px 4px 8px rgba(17, 1, 42, 0.901);
+  color: rgb(221, 208, 221);
+  padding: 8px 16px;
+  animation: slide-in 3s infinite alternate;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

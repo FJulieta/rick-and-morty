@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 
 import styles from "./Nav.module.css";
 
-const Nav = ({ onSearch }) => {
+const Nav = ({ showSearch, onSearch }) => {
   return (
     <div className={styles["nav-bar"]}>
       <div className={styles.links}>
@@ -19,7 +19,7 @@ const Nav = ({ onSearch }) => {
           <button className={styles["contact-button"]}>CONTACT</button>
         </Link>
       </div>
-      {!!onSearch && (
+      {showSearch && !!onSearch && (
         <div className={styles["search-bar"]}>
           <SearchBar onSearch={onSearch} />
         </div>

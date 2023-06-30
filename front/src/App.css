@@ -1,3 +1,7 @@
+body {
+  color: pink;
+}
+
 .App,
 .App * {
   box-sizing: border-box;

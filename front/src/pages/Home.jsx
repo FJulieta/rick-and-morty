@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import Cards from "../components/Cards";
 import Layout from "../components/Layout";
+import SearchBar from "../components/SearchBar";
+
+import styles from "./Home.module.css";
 
 function Home() {
   const [characters, setCharacters] = useState([]);
@@ -41,9 +44,20 @@ function Home() {
     onSearch(randomId.toString());
   };
 
+  const hasResults = characters && characters.length > 0 
+
   return (
-    <Layout onSearch={onSearch} onAddRandomCharacter={onAddRandomCharacter}>
-      <Cards characters={characters} onClose={onClose} />
+    <Layout showSearch={hasResults} onSearch={onSearch} onAddRandomCharacter={onAddRandomCharacter}>
+      {hasResults ?
+        <Cards characters={characters} onClose={onClose} />
+        :
+        <div className={styles.emptyState}>
+            <h2>Bienvenido al universo de Rick y Morty!</h2>
+            <p>Ingresa un número de busqueda</p>
+            <SearchBar onSearch={onSearch}></SearchBar>
+        </div>
+      }
+
     </Layout>
   );
 }
